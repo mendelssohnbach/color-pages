@@ -10,3 +10,8 @@ export async function getStaticPaths() {
   });
   return { paths, fallback: false };
 }
+
+export async function getStaticProps({ params }) {
+  const colors = colors.find((color) => color.name === params.color);
+  return { props: { color } };
+}
