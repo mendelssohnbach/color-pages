@@ -1,9 +1,14 @@
+import Link from 'next/link';
+
 import colors from '../data/colors.json';
 
 export default function Color({ color }) {
   return (
     <div className="color-page" style={{ backgroundColor: color.hex }}>
       <h1>{color.name}</h1>
+      <Link href={'/'}>
+        <a>Go Back</a>
+      </Link>
     </div>
   );
 }
