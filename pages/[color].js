@@ -20,6 +20,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const colors = colors.find((color) => color.name === params.color);
+  const color = colors.find((color) => color.name === params.color);
   return { props: { color } };
 }
